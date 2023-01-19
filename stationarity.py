@@ -190,13 +190,15 @@ class Stationarity(MovingCameraScene):
                   root4.animate.shift([0, - (1.5 ** 2 - 0.7 ** 2) ** 0.5 + 0.99, 0]).set_color(RED),
                   root1.animate.set_color(RED),
                   root2.animate.set_color(RED))
-        self.wait(5)
+        self.wait(1)
 
         self.play(Write(expo))
 
         self.play(self.camera.frame.animate.set(width=axes.width * 10))
         self.wait()
         self.play(self.camera.frame.animate.set(width=axes.width * 1.5))
+        self.wait(5)
+
 
 
 
